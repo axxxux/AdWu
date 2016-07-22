@@ -5,6 +5,7 @@ var User = require("./user.js");
 
 
 module.exports = function(app) {
+  app.get("/", Index.index);
   app.get("/index/:page", Index.index);
   app.get("/user", User.index);
   app.get("/blog/detail/:id", Blog.detail);

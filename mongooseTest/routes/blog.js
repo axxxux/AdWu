@@ -45,7 +45,7 @@ exports.save = function(req, res) {
     blog.save(function(err, result) {
         if (err) console.log(err);
         console.log(result);
-        res.redirect("/index/:");
+        res.redirect("/");
     })
 }
 
@@ -76,7 +76,7 @@ exports.update = function(req, res) {
         }
     }, function(err, result) {
         if (err) console.log(err);
-        res.redirect("/index/:");
+        res.redirect("/");
     })
 }
 
@@ -85,7 +85,7 @@ exports.delete = function(req, res) {
         _id: req.params.id
     }, function (err, result) {
         if (err) console.log(err);
-        res.redirect("/index/:");
+        res.redirect("/");
 
 
     })

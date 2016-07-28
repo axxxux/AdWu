@@ -14,6 +14,7 @@ module.exports = function(app) {
   app.post("/update", Blog.update);
   app.get("/blog/edit/:id", Blog.edit);
   app.get("/blog/delete/:id", Blog.delete);
-
+  app.post("/saveUpload",Index.saveUpload);
+  app.get("/upload",Index.upload);
   app.post("/reply/save", Reply.save);
 }

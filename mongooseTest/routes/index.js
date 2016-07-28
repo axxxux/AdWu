@@ -11,6 +11,8 @@ var upload = multer({
 var store = require("./store.js");
 var Blog = require("./../models/blog.js");
 
+
+//首页
 exports.index = function(req ,res){
     var  currentSize = 1;
     var currentPage = req.params.page;
@@ -93,10 +95,14 @@ exports.index = function(req, res) {
 };*/
 
 
+exports.upload = function(req, res) {
+    res.render("upload");
+};
 
 
 
-exports.save = function (req,res){
+exports.saveUpload = function (req,res){
+    console.log(req);
     var key =  req.file.filename;
     var localFile = req.file.path;
     store.uploadFile(key,localFile,function (req ,ret ){
